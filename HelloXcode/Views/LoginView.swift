@@ -9,10 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
     
- @StateObject var viewModel = LoginViewViewModel
+ @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
-        NavigationView() {
+        NavigationStack() {
             VStack{
                 // Header
                 HeaderView(title: "To Do List",
@@ -21,6 +21,12 @@ struct LoginView: View {
                            background: .pink)
                 // Login form
                 Form {
+                    
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage )
+                            .foregroundColor(.red)
+                    }
+                    
                     TextField("Email Address", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
@@ -32,7 +38,7 @@ struct LoginView: View {
                     TLButton(title: "Log In", 
                              background: .blue
                     ) {
-                        // Attemp log in
+                        viewModel.login()
                     }
                     .padding()
                 }
@@ -43,9 +49,10 @@ struct LoginView: View {
                     Text("New around here?")
                     NavigationLink("Create An Account", 
                                    destination: RegisterView())
-                        .padding(.bottom, 50)
-                    Spacer()
                 }
+                .padding(.bottom, 50)
+                
+                Spacer()
             }
         }
     }
