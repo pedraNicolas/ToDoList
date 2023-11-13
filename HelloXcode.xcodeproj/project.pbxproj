@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F2177E02B01D40C00361D45 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6F2177DF2B01D40C00361D45 /* Localizable.xcstrings */; };
 		6F3B9BAA2AFD8D530038FA37 /* HelloXcodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B9BA92AFD8D530038FA37 /* HelloXcodeApp.swift */; };
 		6F3B9BAC2AFD8D530038FA37 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B9BAB2AFD8D530038FA37 /* MainView.swift */; };
 		6F3B9BAE2AFD8D540038FA37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F3B9BAD2AFD8D540038FA37 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F2177DF2B01D40C00361D45 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		6F3B9BA62AFD8D530038FA37 /* HelloXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3B9BA92AFD8D530038FA37 /* HelloXcodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloXcodeApp.swift; sourceTree = "<group>"; };
 		6F3B9BAB2AFD8D530038FA37 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				6F3B9BA92AFD8D530038FA37 /* HelloXcodeApp.swift */,
 				6F3B9BD22AFDA6810038FA37 /* GoogleService-Info.plist */,
 				6FDBB5992AFF1A4000182142 /* Extensions.swift */,
+				6F2177DF2B01D40C00361D45 /* Localizable.xcstrings */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 6F3B9B9D2AFD8D530038FA37;
 			packageReferences = (
@@ -268,6 +272,7 @@
 			files = (
 				6F3B9BB12AFD8D540038FA37 /* Preview Assets.xcassets in Resources */,
 				6F3B9BAE2AFD8D540038FA37 /* Assets.xcassets in Resources */,
+				6F2177E02B01D40C00361D45 /* Localizable.xcstrings in Resources */,
 				6F3B9BD32AFDA6810038FA37 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,14 @@ import SwiftUI
 struct NewItemView: View {
     
     @StateObject var viewModel = NewItemViewViewModel()
+    @Binding var newItemPresented: Bool
     
     var body: some View {
         VStack{
             Text("New Item")
                 .font(.system(size: 32))
                 .bold()
+                .padding(.top, 100)
             
             Form{
                 TextField("Title", text: $viewModel.title)
@@ -25,14 +27,31 @@ struct NewItemView: View {
                     .datePickerStyle(GraphicalDatePickerStyle() )
                 
                 TLButton(title: "Save", background: .pink) {
-                    viewModel.save()
+                    
+                    if viewModel.canSave {
+                        viewModel.save()
+                        newItemPresented = false
+                    } else {
+                        viewModel.showAlert = true
+                    }
                 }
                 .padding()
+            }
+            .alert(  isPresented: $viewModel.showAlert) {
+                Alert(title: Text("Error"), message: Text("Please fill in all fields and select due date that is today or newer"))
             }
         }
     }
 }
 
 #Preview {
-    NewItemView()
+    NewItemView(
+        newItemPresented: Binding(
+            get:{
+                return true
+            },
+            set: {_ in
+            }
+        )
+    )
 }

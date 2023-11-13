@@ -1,0 +1,66 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "Create An Account" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Due Date" : {
+
+    },
+    "Email Address" : {
+
+    },
+    "Email:" : {
+
+    },
+    "Error" : {
+
+    },
+    "Full Name" : {
+
+    },
+    "Home" : {
+
+    },
+    "Loading Profile.." : {
+
+    },
+    "Log Out" : {
+
+    },
+    "Member Since:" : {
+
+    },
+    "Name:" : {
+
+    },
+    "New around here?" : {
+
+    },
+    "New Item" : {
+
+    },
+    "Password" : {
+
+    },
+    "Please fill in all fields and select due date that is today or newer" : {
+
+    },
+    "Profile" : {
+      "extractionState" : "manual"
+    },
+    "Title" : {
+
+    },
+    "To Do List" : {
+
+    }
+  },
+  "version" : "1.0"
+}

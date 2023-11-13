@@ -31,7 +31,7 @@ struct MainView: View {
             
             ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.circle")
+                    Label(NSLocalizedString("Profile", comment: "Profile"), systemImage: "person.circle")
                 }
             
         }
